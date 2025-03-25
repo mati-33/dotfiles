@@ -111,6 +111,9 @@ fi
 # neovim
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
+# go
+export PATH="$PATH:/usr/local/go/bin"
+
 # prompt
 UBUNTU_ICON=" "
 GIT_ICON=""
