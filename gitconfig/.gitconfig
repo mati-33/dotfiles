@@ -1,0 +1,15 @@
+[user]
+	name = mati
+	email = mati@mati.com
+
+[push]
+	autoSetupRemote = true
+
+[credential]
+	helper = store
+
+[alias]
+	s = status
+	ch = checkout
+	adog = log --all --decorate --oneline --graph
+	can = commit --amend --no-edit
