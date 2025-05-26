@@ -114,52 +114,6 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # go
 export PATH="$PATH:/usr/local/go/bin"
 
-# prompt
-UBUNTU_ICON=" "
-GIT_ICON=""
-PYTHON_ICON=""
-FILES_ICON=" "
-SEP=""
-SEP=":"
-SEP="|"
-SEP=""
-
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-PROMPT_DIRTRIM=3
-
-GREEN="\[\033[0;32m\]"
-RED="\[\033[0;31m\]"
-LIGHT_BLUE="\[\033[1;34m\]"
-LIGHT_GREEN="\[\033[1;32m\]"
-LIGHT_RED="\[\033[1;31m\]"
-YELLOW="\[\033[1;33m\]"
-RESTORE="\[\033[0m\]"
-
-function prompt_cmd {
-    RET=$?
-    BRANCH=""
-    ERR=""
-    PYENV=""
-    if git branch &>/dev/null; then
-        BRANCH="$LIGHT_GREEN$GIT_ICON$RESTORE $(__git_ps1 '%s') $SEP"
-    fi
-    if [[ "$VIRTUAL_ENV" != "" ]]; then
-        PYENV="$YELLOW$PYTHON_ICON$RESTORE $(basename $VIRTUAL_ENV) $SEP"
-    fi
-
-    PS1="$LIGHT_RED$UBUNTU_ICON$RESTORE\u $SEP"
-    PS1+="$LIGHT_BLUE$FILES_ICON$RESTORE\w $SEP"
-    PS1+="$BRANCH$PYENV$ERR"
-
-    if [[ $RET != 0 ]]; then
-        PS1+="$RED\$$RESTORE "
-    else
-        PS1+="$GREEN\$$RESTORE "
-    fi
-
-}
-
-PROMPT_COMMAND=prompt_cmd
 
 # aliases
 alias py='python3'
