@@ -1,3 +1,12 @@
 theme = Elementary
 window-decoration = client
 gtk-titlebar = false
+mouse-hide-while-typing = true
+window-padding-y = 10,0
+
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:bottom
+keybind = alt+k=goto_split:top
+keybind = alt+l=goto_split:right
+
+keybind = ctrl+n=new_window
