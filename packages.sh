@@ -10,6 +10,7 @@ packages=(
     "neofetch"
     "htop"
     "rg"
+    "ghostty"
 )
 
 for package in "${packages[@]}"; do
