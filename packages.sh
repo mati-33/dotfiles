@@ -11,6 +11,7 @@ packages=(
     "htop"
     "rg"
     "ghostty"
+    "starship"
 )
 
 for package in "${packages[@]}"; do
