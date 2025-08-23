@@ -36,7 +36,8 @@ export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
 # colored prompt
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]'
+PS1="$PS1\n\[\033[01;32m\]>\[\033[00m\] "
 eval "$(starship init bash)"
 
 alias py='python3'
