@@ -3,6 +3,9 @@ window-decoration = client
 gtk-titlebar = false
 mouse-hide-while-typing = true
 window-padding-y = 10,0
+window-padding-x = 5,0
+# background = #090909
+background = #111111
 
 keybind = alt+h=goto_split:left
 keybind = alt+j=goto_split:bottom
