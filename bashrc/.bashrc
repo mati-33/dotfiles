@@ -36,8 +36,17 @@ export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
 # colored prompt
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]'
-PS1="$PS1\n\[\033[01;32m\]>\[\033[00m\] "
+function prompt_cmd {
+    RET=$?
+    PS1='\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\n'
+    if [[ $RET != 0 ]]; then
+        PS1+="\[\033[0;31m\]>\[\033[00m\] "
+    else
+        PS1+="\[\033[0;32m\]>\[\033[00m\] "
+    fi
+}
+
+PROMPT_COMMAND=prompt_cmd
 eval "$(starship init bash)"
 
 alias py='python3'
