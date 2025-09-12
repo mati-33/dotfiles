@@ -1,0 +1,59 @@
+@define-color accent #c4a7e7;
+
+* {
+    font-family: JetBrainsMono NF;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: rgba(11, 11, 11, 0.9);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#custom-distro {
+    color: @accent;
+    margin: 0 1em;
+    font-size: 1.4em;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+    color: @accent;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#language {
+    margin: 0 1em;
+}
+
+#sensors,
+#io,
+#power {
+    margin: 0 1em;
+}
+
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth,
+#battery,
+#power-profiles-daemon {
+    padding: 0 10px;
+}
