@@ -1,4 +1,5 @@
 theme = rose-pine
+font-size = 11
 window-decoration = client
 gtk-titlebar = false
 mouse-hide-while-typing = true
