@@ -20,7 +20,7 @@ for img in "$WALLPAPER_DIR"/*; do
     choices+="$filename\0icon\x1f$thumb\n"
 done
 
-SELECTED=$(echo -en "$choices" | rofi -dmenu -theme-str 'element-icon { size: 96; }')
+SELECTED=$(echo -en "$choices" | rofi -dmenu -p "Change wallpaper" -theme-str 'element-icon { size: 96; }')
 
 [ -z "$SELECTED" ] && exit 0
 

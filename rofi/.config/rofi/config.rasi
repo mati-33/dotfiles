@@ -9,6 +9,8 @@ configuration {
     kb-row-up:		    "Up,Control+k";
     kb-row-down:	    "Down,Control+j";
     drun-display-format:    "{name}";
+    display-drun:	    "Applications";
+    display-window:	    "Windows";
     window-format:          "{w}  {c}  {t}";
 }
 
@@ -17,9 +19,8 @@ configuration {
     background-alt: #282B31;
     foreground:     #FFFFFF;
     active:	    #286983;
-    selected:       #C4A7E7;
+    selected:       #C4A7E7aa;
     urgent:         #EB6F92;
-
 
     border-colour:		    var(selected);
     handle-colour:		    var(selected);
@@ -59,7 +60,7 @@ window {
 
     enabled:                     true;
     margin:                      0px;
-    padding:                     0px;
+    padding:                     15px;
     border:                      0px solid;
     border-radius:               5px;
     border-color:                @border-colour;
@@ -88,26 +89,26 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0px;
+    margin:                      10px;
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    ["prompt", "textbox-prompt-colon", "entry" ];
 }
 
 prompt {
     enabled:                     true;
     background-color:            inherit;
     text-color:                  inherit;
+    padding:			 5px 0px;
 }
 textbox-prompt-colon {
     enabled:                     true;
     padding:                     5px 0px;
     expand:                      false;
-    str:                         " ";
     background-color:            inherit;
     text-color:                  inherit;
 }
@@ -117,7 +118,7 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search...";
+    placeholder:                 "";
     placeholder-color:           inherit;
 }
 num-filtered-rows {
@@ -180,7 +181,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     5px 10px;
+    padding:                     15px 10px;
     border:                      0px solid;
     border-radius:               5px;
     border-color:                @border-colour;
