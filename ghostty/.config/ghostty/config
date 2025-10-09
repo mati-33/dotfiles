@@ -5,7 +5,8 @@ gtk-titlebar = false
 mouse-hide-while-typing = true
 window-padding-y = 10,0
 window-padding-x = 5,0
-background = #090909
+background = #0c0c0c
+background-opacity = 0.9
 
 keybind = alt+h=goto_split:left
 keybind = alt+j=goto_split:bottom
