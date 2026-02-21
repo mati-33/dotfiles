@@ -35,14 +35,17 @@ export MANPAGER='nvim +Man!'
 export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
+# nvm
+source /usr/share/nvm/init-nvm.sh
+
 # colored prompt
 function prompt_cmd {
     RET=$?
     PS1='\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\n'
     if [[ $RET != 0 ]]; then
-        PS1+="\[\033[0;31m\]>\[\033[00m\] "
+        PS1+="\[\033[0;31m\]>>\[\033[00m\] "
     else
-        PS1+="\[\033[0;32m\]>\[\033[00m\] "
+        PS1+="\[\033[0;32m\]>>\[\033[00m\] "
     fi
 }
 
@@ -50,11 +53,8 @@ PROMPT_COMMAND=prompt_cmd
 eval "$(starship init bash)"
 
 alias py='python3'
-alias pyenv='python3 -m venv .venv'
-alias pyenv12='python3.12 -m venv .venv'
 alias cb='xclip -selection clipboard'
-alias vim='nvim'
-alias vimconfig='cd ~/.config/nvim/ && vim'
+alias ff='fastfetch'
 alias ..='cd ..'
 
 alias ll='ls -alF'
