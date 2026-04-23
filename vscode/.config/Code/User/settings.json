@@ -1,0 +1,7 @@
+{
+    "chat.disableAIFeatures": true,
+    "telemetry.feedback.enabled": false,
+    //
+    "workbench.colorTheme": "Rosé Pine (no italics)",
+    "editor.minimap.enabled": false,
+}
